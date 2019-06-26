@@ -11,7 +11,7 @@ let d = 0;
 let font;
 
 function setup() {
-  createCanvas(1366, 768, WEBGL);
+  createCanvas(windowWidth, windowHeight, WEBGL);
   font = loadFont("https://cdnjs.cloudflare.com/ajax/libs/topcoat/0.8.0/font/SourceCodePro-Bold.otf");
   textFont(font);
   textAlign(CENTER, CENTER);
