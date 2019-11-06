@@ -1,12 +1,28 @@
 <!DOCTYPE html>
 <html>
 	<head style="margin: 0;">
+		<script src="js/p5.min.js"></script>
+		<script src="js/sketch.js"></script>
+		<link rel="stylesheet" type="text/css" href="style/core.css">
+
+
 		<title>Smite Wheel</title>
-		<img id="header-img" src="H_Hel_Light_Faded.png" style="width: 100%; margin-top: 0 !important; margin-left: 0px; margin-right: 0px; margin-bottom: 0px">
+		<img id="header_img" src="H_Hel_Light_Faded.png" style="width: 100%; margin: 0px user-drag: none; user-select: none; -moz-user-select: none; -webkit-user-drag: none; -webkit-user-select: none; -ms-user-select: none;">
 	</head>
 
-	<body style="margin: 0;>
-		
+	<body style="margin: 0;">
+		<div class="headerTitle">
+			<strong>
+				Role Your God
+				<hr>
+			</strong>
+		</div>
+		<div id="role_god_canvas"></div>
+		<div class="mainButtonDiv">
+			<button class="mainButton">
+				<strong>ROLE!</strong>
+			</button>
+		</div>
 	</body>
 	<script src="js/core.js"></script>
 </html>
