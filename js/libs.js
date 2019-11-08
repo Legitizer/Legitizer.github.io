@@ -36,7 +36,7 @@ class GodIcon{
 	}
 
 	Update(){
-		image(this.image, this.x - (width/6), this.y, this.w, this.h);
+		image(this.image, this.x, this.y, this.w, this.h);
 	}
 
 	static UpdateAll(){
@@ -44,4 +44,13 @@ class GodIcon{
 			instances[i].Update();
 		}
 	}
+}
+
+
+function Lerp(a, b, r){
+	return a + (b - a)*r;
+}
+
+function mod(n, m) {
+  return ((n % m) + m) % m;
 }
