@@ -1,5 +1,5 @@
 
-data = [{"id": 0, "name": "Agni", "class": "Mage", "dmgType": "Magical", "ranged": true, "icon": "https://web2.hirez.com/smite/god-skins/agni_standard-agni.jpg", "image": 0},
+data = [{"id": 0, "name": "Agni", "class": "Mage", "dmgType": "Magical", "ranged": true, "icon": "https://www.smitefire.com/images/god/icon/agni.png", "image": 0},
 {"id": 1, "name": "Anubis", "class": "Mage", "dmgType": "Magical", "ranged": true, "icon": "https://web2.hirez.com/smite/god-skins/anubis_standard-anubis.jpg", "image": 0},
 {"id": 2, "name": "Arachne", "class": "Assassin", "dmgType": "Physical", "ranged": false, "icon": "https://web2.hirez.com/smite/god-skins/arachne_standard-arachne.jpg", "image": 0},
 {"id": 3, "name": "Artemis", "class": "Hunter", "dmgType": "Physical", "ranged": true, "icon": "https://web2.hirez.com/smite/god-skins/artemis_standard-artemis.jpg", "image": 0},
@@ -107,7 +107,7 @@ data = [{"id": 0, "name": "Agni", "class": "Mage", "dmgType": "Magical", "ranged
 {"id": 105, "name": "Yemoja", "class": "Guardian", "dmgType": "Magical", "ranged": true, "icon": "https://web2.hirez.com/smite/god-skins/yemoja_standard-yemoja.jpg", "image": 0}
 ];
 
-instances = []
+let gods = []
 class GodIcon{
 	constructor(id, x, y, w, h){
 		this.x = x;
@@ -120,11 +120,11 @@ class GodIcon{
 		this.dmgType = data[id]["dmgType"];
 		this.ranged = data[id]["ranged"];
 
-		data[id]["image"] = createImg(data[i]["icon"], "ERROR");
+		data[id]["image"] = createImg("https://www.smitefire.com/images/god/icon/"+data[id]["name"].toLowerCase()+".png", "ERROR");
 		this.image = data[id]["image"];
 		this.image.hide();
 
-		instances.push(this);
+		gods.push(this);
 	}
 
 	Update(){
@@ -132,23 +132,23 @@ class GodIcon{
 	}
 
 	Randomize(nGods){
-		i = Math.round(Math.random()*(nGods-1));
-		this.id = data[i]["id"];
-		this.name = data[i]["name"];
-		this.class = data[i]["class"];
-		this.dmgType = data[i]["dmgType"];
-		this.ranged = data[i]["ranged"];
+		r = Math.round(Math.random()*(nGods-1));
+		this.id = data[r]["id"];
+		this.name = data[r]["name"];
+		this.class = data[r]["class"];
+		this.dmgType = data[r]["dmgType"];
+		this.ranged = data[r]["ranged"];
 
-		if (data[i]["image"] == 0){
-			data[i]["image"] = createImg(data[i]["icon"], "ERROR");
+		if (data[r]["image"] == 0){
+			data[r]["image"] = createImg("https://www.smitefire.com/images/god/icon/"+data[r]["name"].toLowerCase()+".png", "ERROR");
+			data[r]["image"].hide();
 		}
-		this.image = data[i]["image"];
-		this.image.hide();
+		this.image = data[r]["image"];
 	}
 
 	static UpdateAll(){
-		for (i = 0; i<instances.length; i++){
-			instances[i].Update();
+		for (let j = 0; j < gods.length; j++){
+			gods[j].Update();
 		}
 	}
 }
