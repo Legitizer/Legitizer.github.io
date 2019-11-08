@@ -7,12 +7,14 @@ let roleSpeed = 10;
 let currentWidth;
 let currentHeight;
 
+let rollingGod = false;
+
 function setup(){
 	currentWidth = windowWidth*0.8;
 	currentHeight = windowWidth*0.2;
 	role_god_canvas = createCanvas(windowWidth*0.8, windowWidth*0.2);
 	role_god_canvas.parent('role_god_canvas');
-	createImages();
+	//createImages();
 
 	for (i = 0; i < 9; i++){
 		r = Math.round(Math.random()*(nGods-1));
@@ -30,12 +32,39 @@ function setup(){
 	}
 }
 
+function roleGod(){
+	if (!rollingGod){
+		roleSpeed = 1000;
+		rollingGod = true;
+		document.getElementById("roleGOD").value = "RESET";
+	}else{
+		roleSpeed = 10;
+		rollingGod = false;
+		document.getElementById("roleGOD").value = "ROLE!";
+	}
+}
+
+
 function draw(){
 	currentWidth = Lerp(currentWidth, windowWidth*0.8, 0.04);
 	resizeCanvas(currentWidth, windowWidth*0.2);
 	background(55, 24, 52);
 
+	if (!rollingGod){
+		roleSpeed = 10;
+	}else if(roleSpeed < 1.5){
+		roleSpeed = 0;
+	}else{
+		roleSpeed = Lerp(roleSpeed, 0, 0.005);
+	}
+
+
 	GodIcon.UpdateAll();
+
+	rectMode(CENTER);
+	fill(150, 184, 182);
+	stroke(55, 24, 52);
+	rect(width/2, height/2, 10, height);
 
 	for (i = 0; i < gods.length; i++){
 		gods[i].w = width/6;

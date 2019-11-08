@@ -107,13 +107,6 @@ data = [{"id": 0, "name": "Agni", "class": "Mage", "dmgType": "Magical", "ranged
 {"id": 105, "name": "Yemoja", "class": "Guardian", "dmgType": "Magical", "ranged": true, "icon": "https://web2.hirez.com/smite/god-skins/yemoja_standard-yemoja.jpg", "image": 0}
 ];
 
-function createImages(){
-	for (i = 0; i < data.length; i++){
-		data[i]["image"] = createImg(data[i]["icon"], "ERROR");
-		data[i]["image"].hide();
-	}
-}
-
 instances = []
 class GodIcon{
 	constructor(id, x, y, w, h){
@@ -126,7 +119,10 @@ class GodIcon{
 		this.class = data[id]["class"];
 		this.dmgType = data[id]["dmgType"];
 		this.ranged = data[id]["ranged"];
+
+		data[id]["image"] = createImg(data[i]["icon"], "ERROR");
 		this.image = data[id]["image"];
+		this.image.hide();
 
 		instances.push(this);
 	}
@@ -136,12 +132,18 @@ class GodIcon{
 	}
 
 	Randomize(nGods){
-		this.id = data[Math.round(Math.random()*(nGods-1))]["id"];
-		this.name = data[Math.round(Math.random()*(nGods-1))]["name"];
-		this.class = data[Math.round(Math.random()*(nGods-1))]["class"];
-		this.dmgType = data[Math.round(Math.random()*(nGods-1))]["dmgType"];
-		this.ranged = data[Math.round(Math.random()*(nGods-1))]["ranged"];
-		this.image = data[Math.round(Math.random()*(nGods-1))]["image"];
+		i = Math.round(Math.random()*(nGods-1));
+		this.id = data[i]["id"];
+		this.name = data[i]["name"];
+		this.class = data[i]["class"];
+		this.dmgType = data[i]["dmgType"];
+		this.ranged = data[i]["ranged"];
+
+		if (data[i]["image"] == 0){
+			data[i]["image"] = createImg(data[i]["icon"], "ERROR");
+		}
+		this.image = data[i]["image"];
+		this.image.hide();
 	}
 
 	static UpdateAll(){
