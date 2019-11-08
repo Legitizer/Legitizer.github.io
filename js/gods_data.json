@@ -1,12 +1,12 @@
-[{"id": 0, "name": "Agni", "class": "Mage", "dmgType": "Magical", "ranged": true},
-{"id": 1, "name": "Anubis", "class": "Mage", "dmgType": "Magical", "ranged": true},
-{"id": 2, "name": "Arachne", "class": "Assassin", "dmgType": "Physical", "ranged": false},
-{"id": 3, "name": "Artemis", "class": "Hunter", "dmgType": "Physical", "ranged": true},
-{"id": 4, "name": "Bastet", "class": "Assassin", "dmgType": "Physical", "ranged": false},
-{"id": 5, "name": "Hades", "class": "Mage", "dmgType": "Magical", "ranged": true},
-{"id": 6, "name": "He Bo", "class": "Mage", "dmgType": "Magical", "ranged": true},
-{"id": 7, "name": "Hel", "class": "Mage", "dmgType": "Magical", "ranged": true},
-{"id": 8, "name": "Hun Batz", "class": "Assassin", "dmgType": "Physical", "ranged": false},
-{"id": 9, "name": "Kali", "class": "Assassin", "dmgType": "Physical", "ranged": false}
+[{"id": 0, "name": "Agni", "class": "Mage", "dmgType": "Magical", "ranged": true, "icon": "https://web2.hirez.com/smite/god-skins/agni_standard-agni.jpg"},
+{"id": 1, "name": "Anubis", "class": "Mage", "dmgType": "Magical", "ranged": true, "icon": "https://web2.hirez.com/smite/god-skins/anubis_standard-anubis.jpg"},
+{"id": 2, "name": "Arachne", "class": "Assassin", "dmgType": "Physical", "ranged": false, "icon": "https://web2.hirez.com/smite/god-skins/arachne_standard-arachne.jpg"},
+{"id": 3, "name": "Artemis", "class": "Hunter", "dmgType": "Physical", "ranged": true, "icon": "https://web2.hirez.com/smite/god-skins/artemis_standard-artemis.jpg"},
+{"id": 4, "name": "Bastet", "class": "Assassin", "dmgType": "Physical", "ranged": false, "icon": "https://web2.hirez.com/smite/god-skins/bastet_standard-bastet.jpg"},
+{"id": 5, "name": "Hades", "class": "Mage", "dmgType": "Magical", "ranged": true, "icon": "https://web2.hirez.com/smite/god-skins/hades_standard-hades.jpg"},
+{"id": 6, "name": "He Bo", "class": "Mage", "dmgType": "Magical", "ranged": true, "icon": "https://web2.hirez.com/smite/god-skins/he_bo_standard-he-bo.jpg"},
+{"id": 7, "name": "Hel", "class": "Mage", "dmgType": "Magical", "ranged": true, "icon": "https://web2.hirez.com/smite/god-skins/hel_standard-hel.jpg"},
+{"id": 8, "name": "Hun Batz", "class": "Assassin", "dmgType": "Physical", "ranged": false, "icon": "https://web2.hirez.com/smite/god-skins/hun_batz_standard-hun-batz.jpg"},
+{"id": 9, "name": "Kali", "class": "Assassin", "dmgType": "Physical", "ranged": false, "icon": "https://web2.hirez.com/smite/god-skins/kali_standard-kali.jpg"}
 ]
 
