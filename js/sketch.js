@@ -1,7 +1,7 @@
 var role_god_canvas;
 
 let gods = []
-let nGods = 20;
+let nGods = 106;
 let roleSpeed = 10;
 
 let currentWidth;
@@ -36,10 +36,10 @@ function draw(){
 	background(55, 24, 52);
 
 	GodIcon.UpdateAll();
+
 	for (i = 0; i < gods.length; i++){
 		gods[i].w = width/6;
 		gods[i].h = height;
-		gods[i].x -= width*(roleSpeed/6000);
 
 		pi = i - 1;
 		if (i == 0){
@@ -47,6 +47,7 @@ function draw(){
 		}
 
 		if (gods[pi].x > gods[i].x){
+			gods[i].x -= width*(roleSpeed/6000);
 			if (gods[i].x + gods[i].w <= 0){
 				gods[i].x = gods[pi].x + width/6;
 				gods[i].Randomize(nGods);
