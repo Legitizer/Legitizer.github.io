@@ -1,7 +1,7 @@
 var role_god_canvas;
 
 let gods = []
-let nGods = 10;
+let nGods = 20;
 let roleSpeed = 10;
 
 let currentWidth;
@@ -14,7 +14,7 @@ function setup(){
 	role_god_canvas.parent('role_god_canvas');
 	createImages();
 
-	for (i = 0; i < 7; i++){
+	for (i = 0; i < 9; i++){
 		r = Math.round(Math.random()*(nGods-1));
 		god = new GodIcon(r, 0, 0, width/6, height)
 		gods.push(god);
@@ -49,6 +49,7 @@ function draw(){
 		if (gods[pi].x > gods[i].x){
 			if (gods[i].x + gods[i].w <= 0){
 				gods[i].x = gods[pi].x + width/6;
+				gods[i].Randomize(nGods);
 			}
 		}else{
 			gods[i].x = gods[pi].x + width/6;
