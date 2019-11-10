@@ -107,22 +107,89 @@ data = [{"id": 0, "name": "Agni", "class": "Mage", "dmgType": "Magical", "ranged
 {"id": 105, "name": "Yemoja", "class": "Guardian", "dmgType": "Magical", "ranged": true, "icon": "https://web2.hirez.com/smite/god-skins/yemoja_standard-yemoja.jpg", "image": 0}
 ];
 
+let mages = []
+let assassins = []
+let hunters = []
+let warriors = []
+let guardians = []
+
+
+function loadImages(){
+	for (let g = 0; g < data.length; g++){
+		data[g]["image"] = createImg("https://www.smitefire.com/images/god/icon/"+data[g]["name"].toLowerCase()+".png", "ERROR");
+		data[g]["image"].hide();
+
+		switch (data[g]["class"]){
+			case "Mage":
+				mages.push(data[g]);
+				break;
+			case "Assassin":
+				assassins.push(data[g]);
+				break;
+			case "Hunter":
+				hunters.push(data[g]);
+				break;
+			case "Warrior":
+				warriors.push(data[g]);
+				break;
+			case "Guardian":
+				guardians.push(data[g]);
+				break;
+		}
+	}
+
+	magesBox = document.getElementById("magesBox");
+	assassinsBox = document.getElementById("assassinsBox");
+	huntersBox = document.getElementById("huntersBox");
+	warriorsBox = document.getElementById("warriorsBox");
+	guardiansBox = document.getElementById("guardiansBox");
+
+}
+
 let gods = []
+
+
+function selectedData(){
+	let result = []
+	;
+	if (magesBox.checked == true){
+		result = result.concat(mages);
+	}
+	if (assassinsBox.checked == true){
+		result = result.concat(assassins);
+	}
+	if (huntersBox.checked == true){
+		result = result.concat(hunters);
+	}
+	if (warriorsBox.checked == true){
+		result = result.concat(warriors);
+	}
+	if (guardiansBox.checked == true){
+		result = result.concat(guardians);
+	}
+
+	return result;
+}
+
 class GodIcon{
 	constructor(id, x, y, w, h){
+		this.new_data = selectedData();
+		let r = Math.round(Math.random()*(this.new_data.length-1));
+		if (this.new_data.length == 0){
+			this.new_data = data;
+			r = Math.round(Math.random()*(this.new_data.length-1));
+		}
+		
 		this.x = x;
 		this.y = y;
 		this.w = w;
 		this.h = h;
-		this.id = data[id]["id"];
-		this.name = data[id]["name"];
-		this.class = data[id]["class"];
-		this.dmgType = data[id]["dmgType"];
-		this.ranged = data[id]["ranged"];
-
-		data[id]["image"] = createImg("https://www.smitefire.com/images/god/icon/"+data[id]["name"].toLowerCase()+".png", "ERROR");
-		this.image = data[id]["image"];
-		this.image.hide();
+		this.id = this.new_data[r]["id"];
+		this.name = this.new_data[r]["name"];
+		this.class = this.new_data[r]["class"];
+		this.dmgType = this.new_data[r]["dmgType"];
+		this.ranged = this.new_data[r]["ranged"];
+		this.image = this.new_data[r]["image"];
 
 		gods.push(this);
 	}
@@ -132,18 +199,18 @@ class GodIcon{
 	}
 
 	Randomize(nGods){
-		r = Math.round(Math.random()*(nGods-1));
-		this.id = data[r]["id"];
-		this.name = data[r]["name"];
-		this.class = data[r]["class"];
-		this.dmgType = data[r]["dmgType"];
-		this.ranged = data[r]["ranged"];
-
-		if (data[r]["image"] == 0){
-			data[r]["image"] = createImg("https://www.smitefire.com/images/god/icon/"+data[r]["name"].toLowerCase()+".png", "ERROR");
-			data[r]["image"].hide();
+		this.new_data = selectedData();
+		let r = Math.round(Math.random()*(this.new_data.length-1));
+		if (this.new_data.length == 0){
+			this.new_data = data;
+			r = Math.round(Math.random()*(this.new_data.length-1));
 		}
-		this.image = data[r]["image"];
+		this.id = this.new_data[r]["id"];
+		this.name = this.new_data[r]["name"];
+		this.class = this.new_data[r]["class"];
+		this.dmgType = this.new_data[r]["dmgType"];
+		this.ranged = this.new_data[r]["ranged"];
+		this.image = this.new_data[r]["image"];
 	}
 
 	static UpdateAll(){

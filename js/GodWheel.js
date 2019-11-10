@@ -16,7 +16,10 @@ let currentHeight;
 canvasWIDTH = 0.75;
 imageSIZE = 10;
 
+let ding;
 function GodWheel_setup(){
+	loadImages();
+	ding = new Audio("sound/ding.mp3");
 	currentWidth = windowWidth*canvasWIDTH;
 	currentHeight = windowWidth*0.2;
 	role_god_canvas = createCanvas(windowWidth*canvasWIDTH, (windowWidth*canvasWIDTH)/imageSIZE);
@@ -52,10 +55,11 @@ function GodWheel_draw(){
 	background(0);
 
 	
-	if(currentRoleSpeed < 1.5){
+	if(currentRoleSpeed < 1.5 && currentRoleSpeed!= 0){
 		currentRoleSpeed = 0;
 		rollingGod = false;
 		canRole = true;
+		//ding.play();
 	}else if(rollingGod){
 		currentRoleSpeed = Lerp(currentRoleSpeed, 0, roleSpeedDecay);
 	}
@@ -88,7 +92,10 @@ function GodWheel_draw(){
 		}
 
 		if (gods[i].x < width/2 && gods[i].x + gods[i].w > width/2 && rollingGod){
-			roleButton.value = gods[i].name;
+			if (roleButton.value != gods[i].name){
+				roleButton.value = gods[i].name;
+			}
+			
 		}
 
 	}
