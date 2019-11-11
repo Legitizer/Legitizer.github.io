@@ -195,6 +195,7 @@ class GodIcon{
 	}
 
 	Update(){
+		let blurStrength = Math.sqrt(Math.pow(width/2 - this.x)/1000, 2);
 		image(this.image, this.x, this.y, this.w, this.h);
 	}
 
