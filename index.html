@@ -11,29 +11,81 @@
 	<body style="margin: 0;">
 		<div class="headerTitle">
 			<strong>
-				Roll Your God - WORK IN PROGRESS. wishal is still gay though
+				Roll Your God - WORK IN PROGRESS.
 				<hr>
 			</strong>
 		</div>
 		<div class = "choice" style="margin-bottom: 20px;">
-			<div style="display: inline-block; margin-right: 20px;">Mages<div><input id="magesBox" type="checkbox" checked=true></div></div>
-			<div style="display: inline-block; margin-right: 20px;">Assassins<div><input id="assassinsBox" type="checkbox" checked=true></div></div>
-			<div style="display: inline-block; margin-right: 20px;">Hunters<div><input id="huntersBox" type="checkbox" checked=true></div></div>
-			<div style="display: inline-block; margin-right: 20px;">Warriors<div><input id="warriorsBox" type="checkbox" checked=true></div></div>
-			<div style="display: inline-block; margin-right: 20px;">Guardians<div><input id="guardiansBox" type="checkbox" checked=true></div></div>
+			<div class="randomLabel" style="display: inline-block; margin-right: 20px;">Mages<div><input id="magesBox" type="checkbox" checked=true></div></div>
+			<div class="randomLabel" style="display: inline-block; margin-right: 20px;">Assassins<div><input id="assassinsBox" type="checkbox" checked=true></div></div>
+			<div class="randomLabel" style="display: inline-block; margin-right: 20px;">Hunters<div><input id="huntersBox" type="checkbox" checked=true></div></div>
+			<div class="randomLabel" style="display: inline-block; margin-right: 20px;">Warriors<div><input id="warriorsBox" type="checkbox" checked=true></div></div>
+			<div class="randomLabel" style="display: inline-block; margin-right: 20px;">Guardians<div><input id="guardiansBox" type="checkbox" checked=true></div></div>
 
 		</div>
 		<div id="role_god_canvas" style="text-align: center;"></div>
-		<div class="mainButtonDiv">
-			<input id="roleGOD" class="mainButton" value="ROLE!" type="button" onclick="roleGod();">
+		<div class="mainButtonDiv" style="padding-bottom: 40px;">
+			<input id="roleGOD" class="mainButton" value="ROLL" type="button" onclick="roleGod();">
 		</div>
-		<div style="margin-bottom: 200px;">
-			
+		<hr style="width: 40%">
+		<div style="text-align: CENTER; padding-top: 50px; padding-bottom: 25px;">
+			<div class="headerTitle">
+				<strong>
+					Roll Your Build
+					<hr>
+				</strong>
+			</div>
+
+			<div class = "choice" style="margin-bottom: 20px;">
+				<div class="randomLabel" style="display: inline-block; margin-right: 20px;">Mage<div><input name="damageType" id="mageR" type="radio" checked=true></div></div>
+				<div class="randomLabel" style="display: inline-block; margin-right: 20px;">Assassin<div><input name="damageType" id="assassinR" type="radio"></div></div>
+				<div class="randomLabel" style="display: inline-block; margin-right: 20px;">Hunter<div><input name="damageType" id="hunterR" type="radio"></div></div>
+				<div class="randomLabel" style="display: inline-block; margin-right: 20px;">Warrior<div><input name="damageType" id="warriorR" type="radio"></div></div>
+				<div class="randomLabel" style="display: inline-block; margin-right: 20px;">Guardian<div><input name="damageType" id="guardianR" type="radio"></div></div>
+			</div>
+			<div class = "choice" style="margin-bottom: 20px;">
+					<div class="randomLabel" style="display: inline-block; margin-right: 20px;">Offensive Items<div><input name="damageType" id="offenseCB" type="checkBox" checked=true></div></div>
+					<div class="randomLabel" style="display: inline-block; margin-right: 20px;">Deffensive Items<div><input name="damageType" id="defenseCB" type="checkBox" checked=true></div></div>
+				</div>
+
+			<div class="card">
+				<div>
+					<div class="cardTitle">
+						BUILD GENERATOR
+					</div>
+					<div class="itemSlots starterItem">
+						<label class="randomLabel" style="display: block;">Starter Item</label>
+						<img id="itemStarter" class="itemIcon" src="style/mark.png" style="width: 15%;">
+					</div>
+					<div class="itemSlots coreItems">
+						<label class="randomLabel" style="display: block;">Build</label>
+						<img id="item1" class="itemIcon" src="style/mark.png" style="width: 15%;">
+						<img id="item2" class="itemIcon" src="style/mark.png" style="width: 15%;">
+						<img id="item3" class="itemIcon" src="style/mark.png" style="width: 15%;">
+						<img id="item4" class="itemIcon" src="style/mark.png" style="width: 15%;">
+						<img id="item5" class="itemIcon" src="style/mark.png" style="width: 15%;">
+						<img id="item6" class="itemIcon" src="style/mark.png" style="width: 15%;">
+					</div>
+					<input class="mainButton" type="button" value="GENERATE" style="margin-bottom: 5%;" onclick="rollBuild()">
+				</div>
+			</div>
+
+			<div class="card">
+				<div>
+					<div class="cardTitle">
+						CHALLENGE
+					</div>
+				</div>
+			</div>
 		</div>
+		
+		
+		
 	</body>
 	<script src="js/p5.min.js"></script>
 	<script src="js/libs.js"></script>
 	<script src="js/GodWheel.js"></script>
 	<script src="js/sketch.js"></script>
 	<script src="js/core.js"></script>
+	<script src="js/items.js"></script>
 </html>
