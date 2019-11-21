@@ -34,7 +34,7 @@ let physical_OFFENSE = [
     {url: "https://web2.hirez.com/smite/item-icons/runeforged-hammer.jpg"},
     {url: "https://web2.hirez.com/smite/item-icons/blackthorn-hammer.jpg"},
     {url: "https://web2.hirez.com/smite/item-icons/silverbranch-bow.jpg"},
-    {url: "https://web2.hirez.com/smite/item-icons/atalanatas-bow.jpg"},
+    {url: "https://web2.hirez.com/smite/item-icons/atalantas-bow.jpg"},
     {url: "https://web2.hirez.com/smite/item-icons/wind-demon.jpg"},
     {url: "https://web2.hirez.com/smite/item-icons/poisoned-star.jpg"},
     {url: "https://web2.hirez.com/smite/item-icons/bumbas-mask.jpg"}
