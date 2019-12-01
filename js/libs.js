@@ -105,7 +105,7 @@ data = [{"id": 0, "name": "Agni", "class": "Mage", "dmgType": "Magical", "ranged
 {"id": 103, "name": "Olorun", "class": "Mage", "dmgType": "Magical", "ranged": true, "icon": "https://web2.hirez.com/smite/god-skins/olorun_standard-olorun.jpg", "image": 0},
 {"id": 104, "name": "Persephone", "class": "Mage", "dmgType": "Magical", "ranged": true, "icon": "https://web2.hirez.com/smite/god-skins/persephone_standard-persephone.jpg", "image": 0},
 {"id": 105, "name": "Yemoja", "class": "Guardian", "dmgType": "Magical", "ranged": true, "icon": "https://web2.hirez.com/smite/god-skins/yemoja_standard-yemoja.jpg", "image": 0},
-{"id": 105, "name": "Heimdallr", "class": "hUNTER", "dmgType": "pHYSICAL", "ranged": true, "icon": "https://web2.hirez.com/smite/god-skins/Heimdallr_standard-Heimdallr.jpg", "image": 0}
+{"id": 105, "name": "Heimdallr", "class": "hUNTER", "dmgType": "pHYSICAL", "ranged": true, "icon": "https://web2.hirez.com/smite/god-skins/heimdallr_standard-heimdallr.jpg", "image": 0}
 ];
 
 let mages = []
