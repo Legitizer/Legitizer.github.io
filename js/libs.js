@@ -104,7 +104,8 @@ data = [{"id": 0, "name": "Agni", "class": "Mage", "dmgType": "Magical", "ranged
 {"id": 102, "name": "Set", "class": "Assassin", "dmgType": "Physical", "ranged": false, "icon": "https://web2.hirez.com/smite/god-skins/set_standard-set.jpg", "image": 0},
 {"id": 103, "name": "Olorun", "class": "Mage", "dmgType": "Magical", "ranged": true, "icon": "https://web2.hirez.com/smite/god-skins/olorun_standard-olorun.jpg", "image": 0},
 {"id": 104, "name": "Persephone", "class": "Mage", "dmgType": "Magical", "ranged": true, "icon": "https://web2.hirez.com/smite/god-skins/persephone_standard-persephone.jpg", "image": 0},
-{"id": 105, "name": "Yemoja", "class": "Guardian", "dmgType": "Magical", "ranged": true, "icon": "https://web2.hirez.com/smite/god-skins/yemoja_standard-yemoja.jpg", "image": 0}
+{"id": 105, "name": "Yemoja", "class": "Guardian", "dmgType": "Magical", "ranged": true, "icon": "https://web2.hirez.com/smite/god-skins/yemoja_standard-yemoja.jpg", "image": 0},
+{"id": 105, "name": "Heimdallr", "class": "hUNTER", "dmgType": "pHYSICAL", "ranged": true, "icon": "https://web2.hirez.com/smite/god-skins/Heimdallr_standard-Heimdallr.jpg", "image": 0}
 ];
 
 let mages = []
