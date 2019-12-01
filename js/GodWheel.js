@@ -1,6 +1,6 @@
 var role_god_canvas;
 
-let nGods = 107;
+let nGods = 106;
 let roleSpeed = 300;
 let currentRoleSpeed = 5;
 let roleSpeedDecay = 0.005
