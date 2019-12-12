@@ -175,10 +175,10 @@ function selectedData(){
 class GodIcon{
 	constructor(id, x, y, w, h){
 		this.new_data = selectedData();
-		let r = Math.round(Math.random()*(this.new_data.length-1));
+		let r = Math.round(Math.random()*(this.new_data.length-0.51));
 		if (this.new_data.length == 0){
 			this.new_data = data;
-			r = Math.round(Math.random()*(this.new_data.length-1));
+			r = Math.round(Math.random()*(this.new_data.length-0.51));
 		}
 		
 		this.x = x;
@@ -202,10 +202,10 @@ class GodIcon{
 
 	Randomize(nGods){
 		this.new_data = selectedData();
-		let r = Math.round(Math.random()*(this.new_data.length-1));
+		let r = Math.round(Math.random()*(this.new_data.length-0.51));
 		if (this.new_data.length == 0){
 			this.new_data = data;
-			r = Math.round(Math.random()*(this.new_data.length-1));
+			r = Math.round(Math.random()*(this.new_data.length-0.51));
 		}
 		this.id = this.new_data[r]["id"];
 		this.name = this.new_data[r]["name"];
